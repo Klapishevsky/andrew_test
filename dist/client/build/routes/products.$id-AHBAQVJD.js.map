@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../app/routes/products.$id.jsx"],
+  "sourcesContent": ["import {useLoaderData} from '@remix-run/react';\nimport {json} from '@shopify/remix-oxygen';\nexport function loader({params}) {\n  const {id} = params;\n\n  return json({\n    id\n  });\n}\nexport default function ProductId() {\n  const {id} = useLoaderData();\n\n  return (\n    <div className=\"product-wrapper\">\n      <h2>Product Handle: {id}</h2>\n    </div>\n  );\n}"],
+  "mappings": ";;;;;;;;;AAcM;AALS,SAAR,YAA6B;AAClC,QAAM,EAAC,GAAE,IAAI,cAAc;AAE3B,SACE,mDAAC,SAAI,WAAU,mBACb,6DAAC,QAAG;AAAA;AAAA,IAAiB;AAAA,OAArB;AAAA;AAAA;AAAA;AAAA,SAAwB,KAD1B;AAAA;AAAA;AAAA;AAAA,SAEA;AAEJ;",
+  "names": []
+}

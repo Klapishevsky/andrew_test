@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../app/routes/collections.$handle.jsx"],
+  "sourcesContent": ["export default function Collection() {\n    return <p>Hello from the collection page!</p>;\n  }"],
+  "mappings": ";;;;;;;;AACW;AADI,SAAR,aAA8B;AACjC,SAAO,mDAAC,OAAE,+CAAH;AAAA;AAAA;AAAA;AAAA,SAAkC;AAC3C;",
+  "names": []
+}

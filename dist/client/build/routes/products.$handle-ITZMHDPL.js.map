@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../app/routes/products.$handle.jsx"],
+  "sourcesContent": ["import {useLoaderData} from '@remix-run/react';\nimport {json} from '@shopify/remix-oxygen';\nexport async function loader({params, context}) {\n    const {handle} = params;\n    const {product} = await context.storefront.query(PRODUCT_QUERY, {\n      variables: {\n        handle,\n      },\n    });\n  \n    if (!product?.id) {\n      throw new Response(null, {status: 404});\n    }\n  \n    return json({\n      handle,\n      product,\n    });\n  };\n  function PrintJson({data}) {\n    return (\n      <details className=\"outline outline-2 outline-blue-300 p-4 my-2\">\n        <summary>Product JSON</summary>\n        <pre>{JSON.stringify(data, null, 2)}</pre>\n      </details>\n    );\n  }\nexport default function ProductHandle() {\n  const {handle} = useLoaderData();\n\n  return (\n    <div className=\"product-wrapper\">\n      <h2>Product Handle: {handle}</h2>\n    </div>\n  );\n}\nconst PRODUCT_QUERY = `#graphql\n  query product($handle: String!) {\n    product(handle: $handle) {\n      id\n      title\n      handle\n      vendor\n    }\n  }\n`;"],
+  "mappings": ";;;;;;;;;AAsBQ;AAKO,SAAR,gBAAiC;AACtC,QAAM,EAAC,OAAM,IAAI,cAAc;AAE/B,SACE,mDAAC,SAAI,WAAU,mBACb,6DAAC,QAAG;AAAA;AAAA,IAAiB;AAAA,OAArB;AAAA;AAAA;AAAA;AAAA,SAA4B,KAD9B;AAAA;AAAA;AAAA;AAAA,SAEA;AAEJ;",
+  "names": []
+}

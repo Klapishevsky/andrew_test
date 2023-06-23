@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../app/routes/products.$id.jsx"],
+  "sourcesContent": ["import {useLoaderData} from '@remix-run/react';\nimport {json} from '@shopify/remix-oxygen';\nexport function loader({params}) {\n  const {id} = params;\n\n  return json({\n    id\n  });\n}\nexport default function ProductId() {\n  const {id} = useLoaderData();\n\n  return (\n    <div className=\"product-wrapper\">\n      <h2>Product Id: {id}</h2>\n    </div>\n  );\n}\nconst PRODUCT_QUERY = `#graphql\n  query product($id: ID!) {\n    product(id: $id) {\n      id\n      title\n      handle\n      vendor\n    }\n  }\n`;"],
+  "mappings": ";;;;;;;;;AAcM;AALS,SAAR,YAA6B;AAClC,QAAM,EAAC,GAAE,IAAI,cAAc;AAE3B,SACE,mDAAC,SAAI,WAAU,mBACb,6DAAC,QAAG;AAAA;AAAA,IAAa;AAAA,OAAjB;AAAA;AAAA;AAAA;AAAA,SAAoB,KADtB;AAAA;AAAA;AAAA;AAAA,SAEA;AAEJ;",
+  "names": []
+}

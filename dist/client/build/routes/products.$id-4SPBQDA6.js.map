@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../app/routes/products.$id.jsx"],
+  "sourcesContent": ["export default function ProductId() {\n    return (\n      <div className=\"product-wrapper\">\n        <h2>Product Content will go here</h2>\n      </div>\n    );\n  }"],
+  "mappings": ";;;;;;;;AAGQ;AAHO,SAAR,YAA6B;AAChC,SACE,mDAAC,SAAI,WAAU,mBACb,6DAAC,QAAG,4CAAJ;AAAA;AAAA;AAAA;AAAA,SAAgC,KADlC;AAAA;AAAA;AAAA;AAAA,SAEA;AAEJ;",
+  "names": []
+}

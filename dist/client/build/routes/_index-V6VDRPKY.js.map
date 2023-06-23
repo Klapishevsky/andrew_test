@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../app/routes/_index.jsx"],
+  "sourcesContent": ["import {useLoaderData} from '@remix-run/react';\nexport function meta() {\n  return [\n    {title: 'Hydrogen'},\n    {description: 'A custom storefront powered by Hydrogen'},\n  ];\n}\nexport async function loader({context}) {\n  return await context.storefront.query(COLLECTIONS_QUERY);\n}\nexport default function Index() {\n  const {collections} = useLoaderData();\n  console.log(collections);\n  return <p>Hello from the home page!</p>;\n}\nconst COLLECTIONS_QUERY = `#graphql\n  query allCollections {\n    collections(first: 3) {\n      nodes {\n        id\n        title\n        handle\n      }\n    }\n  }\n`;\n  "],
+  "mappings": ";;;;;;;;;AAaS;AAZF,SAAS,OAAO;AACrB,SAAO;AAAA,IACL,EAAC,OAAO,WAAU;AAAA,IAClB,EAAC,aAAa,0CAAyC;AAAA,EACzD;AACF;AAIe,SAAR,QAAyB;AAC9B,QAAM,EAAC,YAAW,IAAI,cAAc;AACpC,UAAQ,IAAI,WAAW;AACvB,SAAO,mDAAC,OAAE,yCAAH;AAAA;AAAA;AAAA;AAAA,SAA4B;AACrC;",
+  "names": []
+}

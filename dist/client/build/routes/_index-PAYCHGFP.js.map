@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../app/routes/_index.jsx"],
+  "sourcesContent": ["export function meta() {\n    return [\n      {title: 'Hydrogen'},\n      {description: 'A custom storefront powered by Hydrogen'},\n    ];\n  }\n  export default function Index() {\n    return (\n      <div>\n        <h3>Hello from the home page!</h3>\n      </div>\n    );\n  }"],
+  "mappings": ";;;;;;;;AASQ;AATD,SAAS,OAAO;AACnB,SAAO;AAAA,IACL,EAAC,OAAO,WAAU;AAAA,IAClB,EAAC,aAAa,0CAAyC;AAAA,EACzD;AACF;AACe,SAAR,QAAyB;AAC9B,SACE,mDAAC,SACC,6DAAC,QAAG,yCAAJ;AAAA;AAAA;AAAA;AAAA,SAA6B,KAD/B;AAAA;AAAA;AAAA;AAAA,SAEA;AAEJ;",
+  "names": []
+}
